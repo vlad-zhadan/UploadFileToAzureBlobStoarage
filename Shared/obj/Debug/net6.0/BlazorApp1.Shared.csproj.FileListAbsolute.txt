@@ -1,0 +1,12 @@
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\bin\Debug\net6.0\BlazorApp1.Shared.deps.json
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\bin\Debug\net6.0\BlazorApp1.Shared.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\bin\Debug\net6.0\BlazorApp1.Shared.pdb
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\BlazorApp1.Shared.csproj.AssemblyReference.cache
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\BlazorApp1.Shared.GeneratedMSBuildEditorConfig.editorconfig
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\BlazorApp1.Shared.AssemblyInfoInputs.cache
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\BlazorApp1.Shared.AssemblyInfo.cs
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\BlazorApp1.Shared.csproj.CoreCompileInputs.cache
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\BlazorApp1.Shared.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\refint\BlazorApp1.Shared.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\BlazorApp1.Shared.pdb
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Shared\obj\Debug\net6.0\ref\BlazorApp1.Shared.dll

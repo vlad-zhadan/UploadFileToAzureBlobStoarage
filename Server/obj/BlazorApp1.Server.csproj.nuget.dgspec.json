@@ -1,0 +1,225 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Server\\BlazorApp1.Server.csproj": {}
+  },
+  "projects": {
+    "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\BlazorApp1.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\BlazorApp1.Client.csproj",
+        "projectName": "BlazorApp1.Client",
+        "projectPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\BlazorApp1.Client.csproj",
+        "packagesPath": "C:\\Users\\38095\\.nuget\\packages\\",
+        "outputPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\38095\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj": {
+                "projectPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.21, 6.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Server\\BlazorApp1.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Server\\BlazorApp1.Server.csproj",
+        "projectName": "BlazorApp1.Server",
+        "projectPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Server\\BlazorApp1.Server.csproj",
+        "packagesPath": "C:\\Users\\38095\\.nuget\\packages\\",
+        "outputPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\38095\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\BlazorApp1.Client.csproj": {
+                "projectPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\BlazorApp1.Client.csproj"
+              },
+              "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj": {
+                "projectPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.17.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
+        "projectName": "BlazorApp1.Shared",
+        "projectPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
+        "packagesPath": "C:\\Users\\38095\\.nuget\\packages\\",
+        "outputPath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\38095\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

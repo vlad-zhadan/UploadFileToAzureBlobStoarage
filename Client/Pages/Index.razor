@@ -1,0 +1,155 @@
+﻿@page "/"
+@using System.Net.Http.Headers;
+@using BlazorApp1.Shared
+@inject HttpClient Http
+
+<PageTitle>Upload Files</PageTitle>
+
+<h1>Upload Files!</h1>
+
+<InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document"  multiple />
+<button @onclick="OnButtonSubmitClick" > Submit! </button>
+
+@if (fileNames.Count > 0)
+{
+    <ul>
+        @foreach (var fileName in fileNames)
+        {
+           <li>
+               File : @fileName
+               <br>
+               <span>
+                   Stored File Name: @GetStoredFileName(fileName) 
+               </span>
+           </li>
+        }
+    </ul>
+}
+
+@code {
+    private int maxAllowedFiles = int.MaxValue;
+    private long maxFileSize = long.MaxValue;
+    private List<string> fileNames = new();
+    private List<UploadResult> uploadResults = new();
+    private MultipartFormDataContent content = new();
+
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
+            fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+
+            fileNames.Add(file.Name);
+
+            content.Add(
+                content: fileContent,
+                name: "\"files\"",
+                fileName: file.Name);
+        }
+    }
+
+    private string? GetStoredFileName(string fileName)
+    {
+        var uploadResult = uploadResults.SingleOrDefault(f => f.FileName == fileName);
+        if (uploadResult is not null)
+            return uploadResult.StoredFileName;
+
+        return "File not found.";
+    }
+
+
+    private async Task OnButtonSubmitClick()
+    {
+        if (!Convert.ToBoolean(content.Count()))
+        {
+            return;
+        }
+
+        var response = await Http.PostAsync("/api/File", content);
+        var newUploadResults = await response.Content.ReadFromJsonAsync<List<UploadResult>>();
+
+        if (newUploadResults is not null)
+        {
+            newUploadResults = uploadResults.Concat(newUploadResults).ToList();
+        }
+
+        content = new MultipartFormDataContent();
+    }
+}
+
+
+@* @using Microsoft.Extensions.Logging
+@inject ILogger<Index> Logger
+
+<h3>Upload Files</h3>
+
+<p>
+    <label>
+        Max file size:
+        <input type="number" @bind="maxFileSize" />
+    </label>
+</p>
+
+<p>
+    <label>
+        Max allowed files:
+        <input type="number" @bind="maxAllowedFiles" />
+    </label>
+</p>
+
+<p>
+    <label>
+        Upload up to @maxAllowedFiles of up to @maxFileSize bytes:
+        <InputFile OnChange="@LoadFiles" multiple />
+    </label>
+</p>
+
+@if (isLoading)
+{
+    <p>Uploading...</p>
+}
+else
+{
+    <ul>
+        @foreach (var file in loadedFiles)
+        {
+            <li>
+                <ul>
+                    <li>Name: @file.Name</li>
+                    <li>Last modified: @file.LastModified.ToString()</li>
+                    <li>Size (bytes): @file.Size</li>
+                    <li>Content type: @file.ContentType</li>
+                </ul>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private List<IBrowserFile> loadedFiles = new();
+    private long maxFileSize = 1024 * 15;
+    private int maxAllowedFiles = 3;
+    private bool isLoading;
+
+    private void LoadFiles(InputFileChangeEventArgs e)
+    {
+        isLoading = true;
+        loadedFiles.Clear();
+
+        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            try
+            {
+                loadedFiles.Add(file);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("File: {Filename} Error: {Error}",
+                    file.Name, ex.Message);
+            }
+        }
+
+        isLoading = false;
+    }
+} *@
