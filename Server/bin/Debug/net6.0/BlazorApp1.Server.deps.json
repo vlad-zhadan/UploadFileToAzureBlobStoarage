@@ -8,20 +8,32 @@
     ".NETCoreApp,Version=v6.0": {
       "BlazorApp1.Server/1.0.0": {
         "dependencies": {
-          "Azure.Storage.Blobs": "12.17.0",
+          "Azure.Communication.Email": "1.0.1",
+          "Azure.Storage.Blobs": "12.18.0",
           "BlazorApp1.Client": "1.0.0",
           "BlazorApp1.Shared": "1.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly.Server": "6.0.20",
+          "Microsoft.AspNetCore.Components.WebAssembly.Server": "6.0.22",
           "Swashbuckle.AspNetCore.Swagger": "6.5.0"
         },
         "runtime": {
           "BlazorApp1.Server.dll": {}
         }
       },
-      "Azure.Core/1.33.0": {
+      "Azure.Communication.Email/1.0.1": {
+        "dependencies": {
+          "Azure.Core": "1.35.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Communication.Email.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.123.41802"
+          }
+        }
+      },
+      "Azure.Core/1.35.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
-          "System.Diagnostics.DiagnosticSource": "6.0.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.1",
           "System.Memory.Data": "1.0.2",
           "System.Numerics.Vectors": "4.5.0",
           "System.Text.Encodings.Web": "6.0.0",
@@ -30,32 +42,32 @@
         },
         "runtime": {
           "lib/net6.0/Azure.Core.dll": {
-            "assemblyVersion": "1.33.0.0",
-            "fileVersion": "1.3300.23.31609"
+            "assemblyVersion": "1.35.0.0",
+            "fileVersion": "1.3500.23.45706"
           }
         }
       },
-      "Azure.Storage.Blobs/12.17.0": {
+      "Azure.Storage.Blobs/12.18.0": {
         "dependencies": {
-          "Azure.Storage.Common": "12.16.0",
+          "Azure.Storage.Common": "12.17.0",
           "System.Text.Json": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Azure.Storage.Blobs.dll": {
-            "assemblyVersion": "12.17.0.0",
-            "fileVersion": "12.1700.23.36104"
+            "assemblyVersion": "12.18.0.0",
+            "fileVersion": "12.1800.23.46203"
           }
         }
       },
-      "Azure.Storage.Common/12.16.0": {
+      "Azure.Storage.Common/12.17.0": {
         "dependencies": {
-          "Azure.Core": "1.33.0",
+          "Azure.Core": "1.35.0",
           "System.IO.Hashing": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Azure.Storage.Common.dll": {
-            "assemblyVersion": "12.16.0.0",
-            "fileVersion": "12.1600.23.36104"
+            "assemblyVersion": "12.17.0.0",
+            "fileVersion": "12.1700.23.46203"
           }
         }
       },
@@ -126,11 +138,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.20": {
+      "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.22": {
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll": {
-            "assemblyVersion": "6.0.20.0",
-            "fileVersion": "6.0.2023.32106"
+            "assemblyVersion": "6.0.22.0",
+            "fileVersion": "6.0.2223.42415"
           }
         }
       },
@@ -147,7 +159,7 @@
           "Microsoft.Extensions.Hosting.Abstractions": "2.2.0",
           "Microsoft.Extensions.Logging": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0",
-          "System.Diagnostics.DiagnosticSource": "6.0.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.1",
           "System.Reflection.Metadata": "1.6.0"
         }
       },
@@ -293,7 +305,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "Microsoft.Extensions.Options": "6.0.0",
-          "System.Diagnostics.DiagnosticSource": "6.0.0"
+          "System.Diagnostics.DiagnosticSource": "6.0.1"
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/6.0.4": {
@@ -361,9 +373,15 @@
         }
       },
       "System.Buffers/4.5.0": {},
-      "System.Diagnostics.DiagnosticSource/6.0.0": {
+      "System.Diagnostics.DiagnosticSource/6.0.1": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1523.11507"
+          }
         }
       },
       "System.IO.Hashing/6.0.0": {
@@ -434,26 +452,33 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Azure.Core/1.33.0": {
+    "Azure.Communication.Email/1.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-p06/5ueyCwKe09zqz7bPR6vbWRGrDy6Ot4aqjrjnowhFlXUBoljUdH+abDZP2vUuSZrOSstF4h860hBHWh8uHg==",
-      "path": "azure.core/1.33.0",
-      "hashPath": "azure.core.1.33.0.nupkg.sha512"
+      "sha512": "sha512-dzbU2uBV12kgeF7c6gXoSOSJx21axQ7t9vPmzoR9k4+QHVO4CIqR3FjMXLmEDi27SCo5jovA8PWbY7GwDupZ3w==",
+      "path": "azure.communication.email/1.0.1",
+      "hashPath": "azure.communication.email.1.0.1.nupkg.sha512"
     },
-    "Azure.Storage.Blobs/12.17.0": {
+    "Azure.Core/1.35.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Dix9QkBHxHGSj1GLeQ7nBLEIr+2EH8VYyKxl39zsX9VCdeppaiM6yRVZMh1nZw/PJU1uUOOvJ2dGkOzdtfHxJg==",
-      "path": "azure.storage.blobs/12.17.0",
-      "hashPath": "azure.storage.blobs.12.17.0.nupkg.sha512"
+      "sha512": "sha512-hENcx03Jyuqv05F4RBEPbxz29UrM3Nbhnr6Wl6NQpoU9BCIbL3XLentrxDCTrH54NLS11Exxi/o8MYgT/cnKFA==",
+      "path": "azure.core/1.35.0",
+      "hashPath": "azure.core.1.35.0.nupkg.sha512"
     },
-    "Azure.Storage.Common/12.16.0": {
+    "Azure.Storage.Blobs/12.18.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LnfetNqowFvH+0vz3/UkhPIt4NR740O8ci/R5S5THVFG6VCJu5z7GY9VgqVPNSf5w2V5IfzNTrKdwwz7SC6B8g==",
-      "path": "azure.storage.common/12.16.0",
-      "hashPath": "azure.storage.common.12.16.0.nupkg.sha512"
+      "sha512": "sha512-IUqHRXnabXCzmmvkzqPK4FuGzLxmKSugDEt5Hm5B/JlJFR+aHDsPW4nCLbG0txThqBSKPqcBBU/oA6c5TaFJgA==",
+      "path": "azure.storage.blobs/12.18.0",
+      "hashPath": "azure.storage.blobs.12.18.0.nupkg.sha512"
+    },
+    "Azure.Storage.Common/12.17.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/h8SpUkxMuQy/MbNFeJQGmhYt3JnYfEiGeDojtNgLNzzhyDnRYgjF3ZKYgjORYQpn0Spr+4+v2MZy+0GNJBLrg==",
+      "path": "azure.storage.common/12.17.0",
+      "hashPath": "azure.storage.common.12.17.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/6.0.20": {
       "type": "package",
@@ -497,12 +522,12 @@
       "path": "microsoft.aspnetcore.components.webassembly/6.0.20",
       "hashPath": "microsoft.aspnetcore.components.webassembly.6.0.20.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.20": {
+    "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.22": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WV2SanSJMis3vemiL9YnTjrImlfJEPYksr8UEd0wZ/LTrU42liNJKEZKs2Vw7ThCNp5ZFntn93oKXs80pFvPZA==",
-      "path": "microsoft.aspnetcore.components.webassembly.server/6.0.20",
-      "hashPath": "microsoft.aspnetcore.components.webassembly.server.6.0.20.nupkg.sha512"
+      "sha512": "sha512-6PVO8+0BShMVNx7ICsCdSPN7c1prGWDchnHQ+NgpYiGkS5/RR7Wv8GTQQp36RXkcXvuE5Y8wp1w+Fn/meG/mlg==",
+      "path": "microsoft.aspnetcore.components.webassembly.server/6.0.22",
+      "hashPath": "microsoft.aspnetcore.components.webassembly.server.6.0.22.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Hosting/2.2.0": {
       "type": "package",
@@ -735,12 +760,12 @@
       "path": "system.buffers/4.5.0",
       "hashPath": "system.buffers.4.5.0.nupkg.sha512"
     },
-    "System.Diagnostics.DiagnosticSource/6.0.0": {
+    "System.Diagnostics.DiagnosticSource/6.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
-      "path": "system.diagnostics.diagnosticsource/6.0.0",
-      "hashPath": "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512"
+      "sha512": "sha512-KiLYDu2k2J82Q9BJpWiuQqCkFjRBWVq4jDzKKWawVi9KWzyD0XG3cmfX0vqTQlL14Wi9EufJrbL0+KCLTbqWiQ==",
+      "path": "system.diagnostics.diagnosticsource/6.0.1",
+      "hashPath": "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512"
     },
     "System.IO.Hashing/6.0.0": {
       "type": "package",

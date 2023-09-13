@@ -3,7 +3,7 @@ using BlazorApp1.Shared;
 
 namespace BlazorApp1.Server.Services
 {
-    public class FileService
+    public class FileService : IFileService
     {
         private readonly string _stoarageAccount = "uploadfilefortestproject";
         private readonly string _key = "o502kMzHchFXQAPn6Dmk6FTOG2jITh84gMtBjjiKEXFJIdKy9gdIrlQJ2WXJCvF40wpZEit4ToHX+AStw6mH6g==";

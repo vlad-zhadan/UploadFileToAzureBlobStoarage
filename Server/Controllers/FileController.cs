@@ -11,10 +11,10 @@ namespace BlazorApp1.Server.Controllers
     public class FileController : ControllerBase
     {
         //private readonly IWebHostEnvironment _env;
-        private readonly FileService _fileService;
+        private readonly IFileService _fileService;
 
         //IWebHostEnvironment env,
-        public FileController(FileService fileService)
+        public FileController(IFileService fileService)
         {
             //_env = env;
             _fileService = fileService;

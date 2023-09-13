@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.ResponseCompression;
 using BlazorApp1.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +14,7 @@ builder.Services.AddRazorPages();
 //        new { Title = "Upload File API",  Version = "v1" });
 //});
 
-builder.Services.AddScoped<FileService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 
@@ -23,6 +22,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseWebAssemblyDebugging();
+    //app.UseDeveloperExceptionPage();
 }
 else
 {
