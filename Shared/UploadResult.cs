@@ -12,3 +12,4 @@ namespace BlazorApp1.Shared
         public string? StoredFileName { get; set; }
     }
 }
+    

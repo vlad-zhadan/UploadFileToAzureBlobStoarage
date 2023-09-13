@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TjQIBiNkrbN7IFEu2Lt0QUB2P+dYTioPdGqVj8Xiwox8F9cUXvK1phseog57MWDdtbr8L4Ng96uCEkZVhCLy1A==",
+  "dgSpecHash": "qPqLjXFWafyKxR9H/ypZZV94Gc/gs2qlJ+vAeoZoIUl50XXVTLZtIz6Dc+oJBf2LO6Kj7ekvsl7rgz6fj8kzPw==",
   "success": true,
   "projectFilePath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Server\\BlazorApp1.Server.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,8 @@
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.jsinterop\\6.0.20\\microsoft.jsinterop.6.0.20.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.20\\microsoft.jsinterop.webassembly.6.0.20.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\38095\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\38095\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.io.hashing\\6.0.0\\system.io.hashing.6.0.0.nupkg.sha512",

@@ -7,55 +7,35 @@
 
 <h1>Upload Files!</h1>
 
-<InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document"  multiple />
+<InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document"  />
 <button @onclick="OnButtonSubmitClick" > Submit! </button>
 
-@if (fileNames.Count > 0)
-{
-    <ul>
-        @foreach (var fileName in fileNames)
-        {
-           <li>
-               File : @fileName
-               <br>
-               <span>
-                   Stored File Name: @GetStoredFileName(fileName) 
-               </span>
-           </li>
-        }
-    </ul>
-}
+<p>@Message</p>
 
 @code {
-    private int maxAllowedFiles = int.MaxValue;
-    private long maxFileSize = long.MaxValue;
-    private List<string> fileNames = new();
-    private List<UploadResult> uploadResults = new();
+    string Message = "No file(s) selected";
+    //IBrowserFile file;
     private MultipartFormDataContent content = new();
 
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
-        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
-        {
-            var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
-            fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+        var file = e.File;
 
-            fileNames.Add(file.Name);
+        // if(file is null)
+        // {
+        //     return;
+        // }
 
-            content.Add(
-                content: fileContent,
-                name: "\"files\"",
-                fileName: file.Name);
-        }
-    }
+        Message = $"File {file.Name} selected";
 
-    private string? GetStoredFileName(string fileName)
-    {
-        var uploadResult = uploadResults.SingleOrDefault(f => f.FileName == fileName);
-        if (uploadResult is not null)
-            return uploadResult.StoredFileName;
+        var fileContent = new StreamContent(file.OpenReadStream());
+        fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
 
-        return "File not found.";
+        content.Add(
+            content: fileContent,
+            name: "\"file\"",
+            fileName: file.Name);
+
     }
 
 
@@ -67,16 +47,41 @@
         }
 
         var response = await Http.PostAsync("/api/File", content);
-        var newUploadResults = await response.Content.ReadFromJsonAsync<List<UploadResult>>();
+        //var newUploadResults = await response.Content.ReadFromJsonAsync<UploadResult>();
 
-        if (newUploadResults is not null)
-        {
-            newUploadResults = uploadResults.Concat(newUploadResults).ToList();
-        }
+        // if (newUploadResults is not null)
+        // {
+        //     newUploadResults = uploadResults.Concat(newUploadResults).ToList();
+        // }
 
         content = new MultipartFormDataContent();
     }
+
+    // private string? GetStoredFileName(string fileName)
+    // {
+    //     var uploadResult = uploadResults.SingleOrDefault(f => f.FileName == fileName);
+    //     if (uploadResult is not null)
+    //         return uploadResult.StoredFileName;
+
+    //     return "File not found.";
+    // }
 }
+
+@*@if (fileNames.Count > 0)
+{
+    <ul>
+        @foreach (var fileName in fileNames)
+        {
+           <li>
+               File : @fileName
+               <br>
+               <span>
+                   Stored File Name: @GetStoredFileName(fileName)
+               </span>
+           </li>
+        }
+    </ul>
+}*@
 
 
 @* @using Microsoft.Extensions.Logging
