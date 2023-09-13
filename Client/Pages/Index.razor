@@ -14,21 +14,29 @@
 
 @code {
     string Message = "No file(s) selected";
+    private long maxFileSize = 1024 * 1024 * 15;
     //IBrowserFile file;
     private MultipartFormDataContent content = new();
 
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
+        content = new MultipartFormDataContent();
         var file = e.File;
 
-        // if(file is null)
-        // {
-        //     return;
-        // }
+        if(file is null)
+        {
+            return;
+        }
+
+        if (file.Size > maxFileSize)
+        {
+            Message = $"File {file.Name} is too big try another file!";
+            return;
+        }
 
         Message = $"File {file.Name} selected";
 
-        var fileContent = new StreamContent(file.OpenReadStream());
+        var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
         fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
 
         content.Add(
