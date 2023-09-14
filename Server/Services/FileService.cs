@@ -4,6 +4,9 @@ using BlazorApp1.Shared;
 using Azure.Storage.Blobs.Specialized;
 using Azure.Storage.Sas;
 using Microsoft.AspNetCore.Http;
+using Azure;
+using System.Net;
+using System.Text;
 
 namespace BlazorApp1.Server.Services
 {
@@ -44,29 +47,36 @@ namespace BlazorApp1.Server.Services
         public async Task<BlobResponseDto> UploadBlobAsync(IFormFile blob, string email)
         {
             BlobResponseDto response = new BlobResponseDto();
-            BlobClient client = _filesConteiner.GetBlobClient(blob.FileName);
 
-            //add metadata
-            //client.SetMetadata(new Dictionary<string, string>
-            //{
-            //    { "Email", email },
-            //    { "Name",  blob.FileName} 
-            //});
-
-            //BlobUploadOptions options = new BlobUploadOptions
-            //{
-            //    Metadata = new Dictionary<string, string>
-            //    {
-            //        { "Email", email },
-            //        { "Name",  blob.FileName}
-            //    }
-            //};
-
+            var trustedFileNameForFileStorage = Path.GetRandomFileName();
+            BlobClient client = _filesConteiner.GetBlobClient(trustedFileNameForFileStorage);
+          
             await using (Stream? data = blob.OpenReadStream())
             {
-                //, options
                 await client.UploadAsync(data);
             }
+
+            // IDictionary<string, string> metadata =
+            //new Dictionary<string, string>();
+
+            // // Add some metadata to the container.
+            // metadata.Add("Email", email);
+            // metadata.Add("Name", blob.FileName);
+
+            //IDictionary<string, string> metadata = new Dictionary<string, string>
+            //{
+            //    { "Email", email },
+            //    { "Name", blob.FileName }
+            //};
+
+            IDictionary<string, string> metadata = new Dictionary<string, string>
+            {
+                { "Email", Encoding.ASCII.GetString(Encoding.UTF8.GetBytes(email)) },
+                { "Name", Encoding.ASCII.GetString(Encoding.UTF8.GetBytes(blob.FileName)) }
+            };
+
+
+            await client.SetMetadataAsync(metadata);
 
             response.Status = $"File {blob.FileName} uploaded !";
             response.Error = false;
