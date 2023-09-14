@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="senduploadedfile" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\KPI\\programing\\C\#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6\.0\\browser-wasm\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

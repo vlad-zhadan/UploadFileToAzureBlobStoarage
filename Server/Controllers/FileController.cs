@@ -1,7 +1,9 @@
-﻿using BlazorApp1.Server.Services;
+﻿using Azure.Core.GeoJson;
+using BlazorApp1.Server.Services;
 using BlazorApp1.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Net;
 
 namespace BlazorApp1.Server.Controllers
@@ -12,12 +14,14 @@ namespace BlazorApp1.Server.Controllers
     {
         //private readonly IWebHostEnvironment _env;
         private readonly IFileService _fileService;
+        private readonly ILogger<FileController> _logger;
 
         //IWebHostEnvironment env,
-        public FileController(IFileService fileService)
+        public FileController(IFileService fileService, ILogger<FileController> logger)
         {
             //_env = env;
             _fileService = fileService;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -29,9 +33,11 @@ namespace BlazorApp1.Server.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> UploadFileToAzureBlob( IFormFile file)
+        public async Task<IActionResult> UploadFileToAzureBlob([FromForm] UploadResult fileInfo)
         {
-            var result = await _fileService.UploadBlobAsync(file);
+            _logger.LogInformation(fileInfo.File.FileName);
+            _logger.LogInformation(fileInfo.Email);
+            var result = await _fileService.UploadBlobAsync(fileInfo.File, fileInfo.Email);
             return Ok(result);
         }
 

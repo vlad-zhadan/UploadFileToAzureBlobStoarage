@@ -5,20 +5,39 @@
 
 <PageTitle>Upload Files</PageTitle>
 
-<h1>Upload Files!</h1>
+<h1 class="display-4">Upload Files!</h1>
 
-<InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document"  />
-<button @onclick="OnButtonSubmitClick" > Submit! </button>
+<div class="form-group">
+    <InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="form-control-file" />
+    <button class="btn btn-primary" @onclick="OnButtonSubmitClick">Submit!</button>
+</div>
 
-<p>@Message</p>
+<p class="alert alert-info">@Message</p>
+
+<form @onsubmit="HandleSubmit">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" @bind="Email" class="form-control" placeholder="Enter your email" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@if (submitted)
+{
+    <p>Submitted Email: @Email</p>
+}
+
 
 @code {
+    private string Email = "File@gmail.com";
+    private bool submitted = false;
     string Message = "No file(s) selected";
     private long maxFileSize = 1024 * 1024 * 15;
     //IBrowserFile file;
     private MultipartFormDataContent content = new();
+    private MultipartFormDataContent form = new();
 
-    private void OnInputFileChange(InputFileChangeEventArgs e)
+    private void OnInputFileChange1(InputFileChangeEventArgs e)
     {
         // every input change create new empty content object 
         content = new MultipartFormDataContent();
@@ -45,18 +64,59 @@
             content: fileContent,
             name: "\"file\"",
             fileName: file.Name);
+    }
 
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        //string filePath = @"D:\Test\de.json";
+        var file = e.File;
+
+        if (file.Size > maxFileSize)
+        {
+            Message = $"File {file.Name} is too big try another file!";
+            return;
+        }
+
+        form = new MultipartFormDataContent();
+
+        var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
+        //using var fileContent = new ByteArrayContent(await File.ReadAllBytesAsync(filePath));
+        fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+        form.Add(fileContent, "File", file.Name);
+
+        // this is the changed part
+        form.Add(new StringContent(Email), "Email");
+
+
+
+        
     }
 
 
     private async Task OnButtonSubmitClick()
     {
-        if (!Convert.ToBoolean(content.Count()))
-        {
-            return;
-        }
+        // if (!Convert.ToBoolean(content.Count()))
+        // {
+        //     return;
+        // }
 
-        var response = await Http.PostAsync("/api/File", content);
+        if (!Convert.ToBoolean(form.Count()))
+        {
+             return;
+         }
+
+        //var response = await Http.PostAsync("/api/File", content);
+
+        // var httpClient = new HttpClient()
+        //     {
+        //         BaseAddress = new Uri("https:localhost:7198")
+        //     };
+
+        //var response = await httpClient.PostAsync($"api/File", form);
+        var response = await Http.PostAsync("/api/File", form);
+        response.EnsureSuccessStatusCode();
+        var responseContent = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
         //var newUploadResults = await response.Content.ReadFromJsonAsync<UploadResult>();
 
         // if (newUploadResults is not null)
@@ -68,6 +128,8 @@
         // after every submition create new empty content object
         content = new MultipartFormDataContent();
     }
+
+    private async Task HandleSubmit() => submitted = true;
 
     // private string? GetStoredFileName(string fileName)
     // {

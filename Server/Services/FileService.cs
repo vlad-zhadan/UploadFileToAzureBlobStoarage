@@ -1,5 +1,9 @@
 ﻿using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
 using BlazorApp1.Shared;
+using Azure.Storage.Blobs.Specialized;
+using Azure.Storage.Sas;
+using Microsoft.AspNetCore.Http;
 
 namespace BlazorApp1.Server.Services
 {
@@ -37,13 +41,30 @@ namespace BlazorApp1.Server.Services
             return files;
         }
 
-        public async Task<BlobResponseDto> UploadBlobAsync(IFormFile blob)
+        public async Task<BlobResponseDto> UploadBlobAsync(IFormFile blob, string email)
         {
             BlobResponseDto response = new BlobResponseDto();
             BlobClient client = _filesConteiner.GetBlobClient(blob.FileName);
 
+            //add metadata
+            //client.SetMetadata(new Dictionary<string, string>
+            //{
+            //    { "Email", email },
+            //    { "Name",  blob.FileName} 
+            //});
+
+            //BlobUploadOptions options = new BlobUploadOptions
+            //{
+            //    Metadata = new Dictionary<string, string>
+            //    {
+            //        { "Email", email },
+            //        { "Name",  blob.FileName}
+            //    }
+            //};
+
             await using (Stream? data = blob.OpenReadStream())
             {
+                //, options
                 await client.UploadAsync(data);
             }
 
