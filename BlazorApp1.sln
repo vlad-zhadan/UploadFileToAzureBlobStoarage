@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Client", "Blazor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Shared", "BlazorApp1\Shared\BlazorApp1.Shared.csproj", "{4B53489C-C840-4A7A-AB87-2E9B1DCC11C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionApp", "FunctionApp\FunctionApp.csproj", "{6CB21FE4-AE8E-49B3-96A3-56B436DEAE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionApp", "FunctionApp\FunctionApp.csproj", "{6CB21FE4-AE8E-49B3-96A3-56B436DEAE68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadFile.Test", "UploadFile.Test\UploadFile.Test.csproj", "{176445FE-94F6-4C07-B4C8-533B1F83F27F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6CB21FE4-AE8E-49B3-96A3-56B436DEAE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CB21FE4-AE8E-49B3-96A3-56B436DEAE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CB21FE4-AE8E-49B3-96A3-56B436DEAE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{176445FE-94F6-4C07-B4C8-533B1F83F27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176445FE-94F6-4C07-B4C8-533B1F83F27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176445FE-94F6-4C07-B4C8-533B1F83F27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176445FE-94F6-4C07-B4C8-533B1F83F27F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

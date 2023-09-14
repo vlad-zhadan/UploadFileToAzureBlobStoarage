@@ -23,6 +23,7 @@ namespace BlazorApp1.Server.Controllers
             _logger = logger;
         }
 
+        // delete this get !!!!
         [HttpGet]
         public async Task<IActionResult> ListAllBlobsAsync()
         {
@@ -36,16 +37,16 @@ namespace BlazorApp1.Server.Controllers
         {
             _logger.LogInformation(fileInfo.File.FileName);
             _logger.LogInformation(fileInfo.Email);
+
             if(fileInfo.File.FileName is null)
             {
-
+                return BadRequest("Invalid file name");
             }
 
             if (fileInfo.Email == "")
             {
-                    
+                return BadRequest("Email cannot be empty");
             }
-
 
             var result = await _fileService.UploadBlobAsync(fileInfo.File, fileInfo.Email);
             return Ok(result);

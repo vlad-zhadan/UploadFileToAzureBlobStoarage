@@ -1,0 +1,8 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+        "BlobConectionString": "DefaultEndpointsProtocol=https;AccountName=uploadfilefortestproject;AccountKey=o502kMzHchFXQAPn6Dmk6FTOG2jITh84gMtBjjiKEXFJIdKy9gdIrlQJ2WXJCvF40wpZEit4ToHX+AStw6mH6g==;EndpointSuffix=core.windows.net"
+    }
+}
