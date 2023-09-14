@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Azure;
 using System.Net;
 using System.Text;
+using FunctionApp.Services;
 
 namespace BlazorApp1.Server.Services
 {
@@ -15,13 +16,15 @@ namespace BlazorApp1.Server.Services
         private readonly string _stoarageAccount = "uploadfilefortestproject";
         private readonly string _key = "o502kMzHchFXQAPn6Dmk6FTOG2jITh84gMtBjjiKEXFJIdKy9gdIrlQJ2WXJCvF40wpZEit4ToHX+AStw6mH6g==";
         private readonly BlobContainerClient _filesConteiner;
+        private readonly ICreateSASBlobService _createSASBlob;
 
-        public FileService()
+        public FileService(ICreateSASBlobService createSASBlob)
         {
             var credential = new Azure.Storage.StorageSharedKeyCredential(_stoarageAccount, _key);
             var blobUri = $"https://{_stoarageAccount}.blob.core.windows.net";
             var blobServiceClient = new BlobServiceClient(new Uri(blobUri), credential);
             _filesConteiner = blobServiceClient.GetBlobContainerClient("files");
+            _createSASBlob = createSASBlob;
         }
 
         public async Task<List<BlobDto>> ListBlobsAsync()
@@ -69,10 +72,14 @@ namespace BlazorApp1.Server.Services
             //    { "Name", blob.FileName }
             //};
 
+            Uri uri = _createSASBlob.CreateSASBlob(client);
+             
+
             IDictionary<string, string> metadata = new Dictionary<string, string>
             {
-                { "Email", Encoding.ASCII.GetString(Encoding.UTF8.GetBytes(email)) },
-                { "Name", Encoding.ASCII.GetString(Encoding.UTF8.GetBytes(blob.FileName)) }
+                { "Email", email },
+                { "Name", Encoding.ASCII.GetString(Encoding.UTF8.GetBytes(blob.FileName)) },
+                { "Uri", uri.ToString() }
             };
 
 

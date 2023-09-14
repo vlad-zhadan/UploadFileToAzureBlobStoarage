@@ -1,4 +1,5 @@
 using BlazorApp1.Server.Services;
+using FunctionApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddRazorPages();
 //});
 
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddSingleton<ICreateSASBlobService, CreateSASBlobService>();
 
 var app = builder.Build();
 
