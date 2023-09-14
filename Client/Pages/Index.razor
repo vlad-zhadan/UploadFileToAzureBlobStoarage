@@ -19,7 +19,6 @@
         <label for="email">Email:</label>
         <input type="email" id="email" @bind="Email" class="form-control" placeholder="Enter your email" required />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 @if (submitted)
@@ -29,22 +28,18 @@
 
 
 @code {
-    private string Email = "tonsilotrenor@gmail.com";
+    private string Email = "";
     private bool submitted = false;
     string Message = "No file(s) selected";
     private long maxFileSize = 1024 * 1024 * 15;
-    //IBrowserFile file;
     private MultipartFormDataContent content = new();
     private MultipartFormDataContent form = new();
 
-    private void OnInputFileChange1(InputFileChangeEventArgs e)
+    private void OnInputFileChange(InputFileChangeEventArgs e)
     {
-        // every input change create new empty content object 
-        content = new MultipartFormDataContent();
-
         var file = e.File;
 
-        if(file is null)
+        if (file is null)
         {
             return;
         }
@@ -57,26 +52,6 @@
 
         Message = $"File {file.Name} selected";
 
-        var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
-        fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
-
-        content.Add(
-            content: fileContent,
-            name: "\"file\"",
-            fileName: file.Name);
-    }
-
-    private void OnInputFileChange(InputFileChangeEventArgs e)
-    {
-        //string filePath = @"D:\Test\de.json";
-        var file = e.File;
-
-        if (file.Size > maxFileSize)
-        {
-            Message = $"File {file.Name} is too big try another file!";
-            return;
-        }
-
         form = new MultipartFormDataContent();
 
         var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
@@ -86,47 +61,28 @@
 
         // this is the changed part
         form.Add(new StringContent(Email), "Email");
-
-
-
-        
     }
 
 
     private async Task OnButtonSubmitClick()
     {
-        // if (!Convert.ToBoolean(content.Count()))
-        // {
-        //     return;
-        // }
-
         if (!Convert.ToBoolean(form.Count()))
         {
-             return;
-         }
+            return;
+        }
 
-        //var response = await Http.PostAsync("/api/File", content);
+        if (Email == "")
+        {
+            //write that email is choosen
+            return;
+        }
 
-        // var httpClient = new HttpClient()
-        //     {
-        //         BaseAddress = new Uri("https:localhost:7198")
-        //     };
-
-        //var response = await httpClient.PostAsync($"api/File", form);
         var response = await Http.PostAsync("/api/File", form);
         response.EnsureSuccessStatusCode();
         var responseContent = await response.Content.ReadAsStringAsync();
         Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
-        //var newUploadResults = await response.Content.ReadFromJsonAsync<UploadResult>();
-
-        // if (newUploadResults is not null)
-        // {
-        //     newUploadResults = uploadResults.Concat(newUploadResults).ToList();
-        // }
-
-
-        // after every submition create new empty content object
-        content = new MultipartFormDataContent();
+        
+        form = new MultipartFormDataContent();
     }
 
     private async Task HandleSubmit() => submitted = true;

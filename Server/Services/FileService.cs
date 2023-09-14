@@ -59,18 +59,6 @@ namespace BlazorApp1.Server.Services
                 await client.UploadAsync(data);
             }
 
-            // IDictionary<string, string> metadata =
-            //new Dictionary<string, string>();
-
-            // // Add some metadata to the container.
-            // metadata.Add("Email", email);
-            // metadata.Add("Name", blob.FileName);
-
-            //IDictionary<string, string> metadata = new Dictionary<string, string>
-            //{
-            //    { "Email", email },
-            //    { "Name", blob.FileName }
-            //};
 
             Uri uri = _createSASBlob.CreateSASBlob(client);
              
