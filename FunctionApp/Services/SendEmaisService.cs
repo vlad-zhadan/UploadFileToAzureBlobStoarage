@@ -31,7 +31,7 @@ namespace FunctionApp.Services
             email.From.Add(new MailboxAddress("File Upload Service", "xiaomiredmix4good@gmail.com"));
             email.To.Add(new MailboxAddress("Receiver Name", receiverEmail));
 
-            email.Subject = "Testing out email sending";
+            email.Subject = "File Uploaded!";
 
             // Create the HTML body with the URI included
             string bodyHtml = $"<b>Hello, you successfully upload file to Azure Storage! </b><br><a href=\"{uri}\">Click here to access the resource</a>";

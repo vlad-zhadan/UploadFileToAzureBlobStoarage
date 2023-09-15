@@ -13,19 +13,21 @@
             <InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
         </div>
 
-        <div class="email-form item-b">
-            <form @onsubmit="HandleSubmit">
-                <div class="form-group">
+        <div class="email-form ">
+            <form @onsubmit="HandleSubmit" class=" form">
+                <div class="form-group item-b">
 
                     <input type="email" id="email" @bind="Email" class="form-control" placeholder="Enter your email" required />
-                    <ValidationMessage For="@(() => Email)" />
+                    
                     
                 </div>
+                <div class="submit-button item-c">
+                    <button type="submit" class="btn btn-primary" @onclick="OnButtonSubmitClick">Submit</button>
+                </div>
+                
             </form>
         </div>
-        <div class="submit-button item-c">
-            <button class="btn btn-primary" @onclick="OnButtonSubmitClick">Submit!</button>
-        </div>
+        
     </div>
 </div>
 
@@ -113,6 +115,12 @@
 
 @*@if (fileNames.Count > 0)
 {
+<div class="submit-button item-c">
+            <button class="btn btn-primary" @onclick="OnButtonSubmitClick" type="submit">Submit! </button>
+        </div>
+
+
+
     <ul>
         @foreach (var fileName in fileNames)
         {

@@ -15,17 +15,26 @@
     align-items: stretch;
 }
 
+.form[b-7hithh1ngy] {
+    display: grid;
+    grid-area: form;
+    grid-template-columns: 3fr 1fr;
+    
+    grid-template-areas:
+        "email button";
+}
+
 .container[b-7hithh1ngy] {
     display: grid;
     justify-content: center;
     align-items: center;
     width: 80vw;
-    grid-template-columns: 3fr 1fr;
+
     grid-template-rows: 70vh 5vh;
     grid-gap: 5px;
     grid-template-areas:
-        "main main"
-        "email button";
+        "main"
+        "form";
 }
 
 .center[b-7hithh1ngy]{
@@ -37,7 +46,7 @@
 
 .file-drop-zone[b-7hithh1ngy] {
     display: grid;
-    width: 100%;
+    width: 80vw;
     height: 100%;
     border: 3px dotted #fb275d;
     align-items: center;

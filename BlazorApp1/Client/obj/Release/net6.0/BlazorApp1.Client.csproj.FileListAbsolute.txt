@@ -874,3 +874,16 @@ F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\BlazorApp1.
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\refint\BlazorApp1.Client.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\BlazorApp1.Client.pdb
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\ref\BlazorApp1.Client.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\wwwroot\_framework\BouncyCastle.Crypto.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\wwwroot\_framework\GemBox.Email.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\wwwroot\_framework\Pkcs11Interop.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\wwwroot\_framework\BouncyCastle.Crypto.dll.gz
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\wwwroot\_framework\GemBox.Email.dll.gz
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\wwwroot\_framework\Pkcs11Interop.dll.gz
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\GemBox.Email.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\Pkcs11Interop.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\bin\Release\net6.0\BouncyCastle.Crypto.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\build-gz\r6qJSMDs.gz
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\build-gz\W7PL7bOw.gz
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\build-gz\gOSqsf+E.gz
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Release\net6.0\scopedcss\Pages\Index.razor.rz.scp.css

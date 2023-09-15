@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vHu1JGYZatAEo/vOFUSXCYvo4KiROvFeZuAwm4uV3rM=",
+  "Hash": "/C+RuMAXriYb1bTyI6jUUO4529t9zF6z2Ul1rnm9mWY=",
   "Source": "BlazorApp1.Server",
   "BasePath": "_content/BlazorApp1.Server",
   "Mode": "Default",
@@ -131,6 +131,23 @@
       "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Shared\\bin\\Release\\net6.0\\BlazorApp1.Shared.pdb"
     },
     {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\BouncyCastle.Crypto.dll",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Project",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BouncyCastle.Crypto.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\38095\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\lib\\netstandard2.0\\BouncyCastle.Crypto.dll"
+    },
+    {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.22.w4ghufbxk4.js",
       "SourceId": "BlazorApp1.Client",
       "SourceType": "Project",
@@ -180,6 +197,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\38095\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.22\\runtimes\\browser-wasm\\native\\dotnet.wasm"
+    },
+    {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\GemBox.Email.dll",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Project",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/GemBox.Email.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\38095\\.nuget\\packages\\gembox.email\\17.0.1147\\lib\\netstandard2.0\\GemBox.Email.dll"
     },
     {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\icudt.dat",
@@ -945,6 +979,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\38095\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.22\\runtimes\\browser-wasm\\lib\\net6.0\\netstandard.dll"
+    },
+    {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Pkcs11Interop.dll",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Project",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Pkcs11Interop.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\38095\\.nuget\\packages\\pkcs11interop\\5.1.1\\lib\\netstandard2.0\\Pkcs11Interop.dll"
     },
     {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\System.AppContext.dll",
@@ -5129,6 +5180,23 @@
       "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\System.Net.Sockets.dll"
     },
     {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\gOSqsf+E.gz",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Project",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/BouncyCastle.Crypto.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\BouncyCastle.Crypto.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\BouncyCastle.Crypto.dll"
+    },
+    {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\gqbmWwtE.gz",
       "SourceId": "BlazorApp1.Client",
       "SourceType": "Project",
@@ -6251,6 +6319,23 @@
       "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\r6qJSMDs.gz",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Project",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/GemBox.Email.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\GemBox.Email.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\GemBox.Email.dll"
+    },
+    {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\reVi6VTH.gz",
       "SourceId": "BlazorApp1.Client",
       "SourceType": "Project",
@@ -6725,6 +6810,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\System.Threading.Thread.dll"
+    },
+    {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\W7PL7bOw.gz",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Project",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Pkcs11Interop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Pkcs11Interop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Pkcs11Interop.dll"
     },
     {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\wFIyYuhF.gz",

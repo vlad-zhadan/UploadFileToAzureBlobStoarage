@@ -1,3 +1,75 @@
+/* /Pages/Index.razor.rz.scp.css */
+.item-a[b-7hithh1ngy] {
+    grid-area: main;
+}
+
+.item-b[b-7hithh1ngy] {
+    grid-area: email;
+    display: grid;
+}
+
+.item-c[b-7hithh1ngy] {
+    grid-area: button;
+    display: grid;
+
+    align-items: stretch;
+}
+
+.form[b-7hithh1ngy] {
+    display: grid;
+    grid-area: form;
+    grid-template-columns: 3fr 1fr;
+    
+    grid-template-areas:
+        "email button";
+}
+
+.container[b-7hithh1ngy] {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+
+    grid-template-rows: 70vh 5vh;
+    grid-gap: 5px;
+    grid-template-areas:
+        "main"
+        "form";
+}
+
+.center[b-7hithh1ngy]{
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-drop-zone[b-7hithh1ngy] {
+    display: grid;
+    width: 80vw;
+    height: 100%;
+    border: 3px dotted #fb275d;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.hover[b-7hithh1ngy] {
+    border-style: solid;
+    background-color: #00ca71;
+}
+
+.image-container img[b-7hithh1ngy] {
+    width: 20%;
+    margin: 1rem;
+}
+
+
+
+
+
+
+
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-s8xsnq6cv2] {
     position: relative;
