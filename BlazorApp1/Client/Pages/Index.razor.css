@@ -1,0 +1,62 @@
+﻿.item-a {
+    grid-area: main;
+}
+
+.item-b {
+    grid-area: email;
+    display: grid;
+}
+
+.item-c {
+    grid-area: button;
+    display: grid;
+
+    align-items: stretch;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 70vh 5vh;
+    grid-gap: 5px;
+    grid-template-areas:
+        "main main"
+        "email button";
+}
+
+.center{
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-drop-zone {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    border: 3px dotted #fb275d;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.hover {
+    border-style: solid;
+    background-color: #00ca71;
+}
+
+.image-container img {
+    width: 20%;
+    margin: 1rem;
+}
+
+
+
+
+
+
+

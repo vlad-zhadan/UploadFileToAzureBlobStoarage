@@ -36,6 +36,8 @@ namespace UploadFile.Test.AzureTrigerFunction.Tests
             // Assert
             A.CallTo(() => mockSendEmailService.SendEmail("test@example.com", "https://example.com/file"))
                 .MustHaveHappenedOnceExactly();
+
+
         }
 
         [Fact]

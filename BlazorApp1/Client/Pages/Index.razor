@@ -1,25 +1,33 @@
 ﻿@page "/"
 @using System.Net.Http.Headers;
 @using BlazorApp1.Shared
+@using System.ComponentModel.DataAnnotations
 @inject HttpClient Http
 
 <PageTitle>Upload Files</PageTitle>
+<div class="center">
+    <div class="container">
+        <div class="file-drop-zone @HoverClass item-a"
+        @ondragenter="OnDragEnter"
+        @ondragleave="OnDragLeave" @ondragover="OnDragEnter">
+            <InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+        </div>
 
-<h1 class="display-4">Upload Files!</h1>
+        <div class="email-form item-b">
+            <form @onsubmit="HandleSubmit">
+                <div class="form-group">
 
-<div class="form-group">
-    <InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="form-control-file" />
-    <button class="btn btn-primary" @onclick="OnButtonSubmitClick">Submit!</button>
+                    <input type="email" id="email" @bind="Email" class="form-control" placeholder="Enter your email" required />
+                    
+                </div>
+            </form>
+        </div>
+        <div class="submit-button item-c">
+            <button class="btn btn-primary" @onclick="OnButtonSubmitClick">Submit!</button>
+        </div>
+    </div>
 </div>
 
-<p class="alert alert-info">@Message</p>
-
-<form @onsubmit="HandleSubmit">
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" @bind="Email" class="form-control" placeholder="Enter your email" required />
-    </div>
-</form>
 
 @if (submitted)
 {
@@ -28,12 +36,19 @@
 
 
 @code {
+    // [Required(ErrorMessage = "Email is required")]
+    // [EmailAddress(ErrorMessage = "Invalid email format")]
     private string Email = "";
+
     private bool submitted = false;
     string Message = "No file(s) selected";
     private long maxFileSize = 1024 * 1024 * 15;
-    private MultipartFormDataContent content = new();
     private MultipartFormDataContent form = new();
+    private string HoverClass = string.Empty;
+
+    void OnDragEnter(DragEventArgs e) => HoverClass = "hover";
+    void OnDragLeave(DragEventArgs e) => HoverClass = string.Empty;
+
 
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
@@ -66,37 +81,36 @@
 
     private async Task OnButtonSubmitClick()
     {
-        if (!Convert.ToBoolean(form.Count()))
-        {
-            
-            return;
-        }
+       
 
-        if (Email == "")
-        {
-            //write that email is choosen
-            return;
-        }
+            if (!Convert.ToBoolean(form.Count()))
+            {
 
-        var response = await Http.PostAsync("/api/File", form);
-        response.EnsureSuccessStatusCode();
-        var responseContent = await response.Content.ReadAsStringAsync();
-        Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
-        
-        form = new MultipartFormDataContent();
+                return;
+            }
+
+            if (Email == "")
+            {
+                //write that email is choosen
+                return;
+            }
+
+            var response = await Http.PostAsync("/api/File", form);
+            response.EnsureSuccessStatusCode();
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
+
+            form = new MultipartFormDataContent();
+       
     }
 
     private async Task HandleSubmit() => submitted = true;
 
-    // private string? GetStoredFileName(string fileName)
-    // {
-    //     var uploadResult = uploadResults.SingleOrDefault(f => f.FileName == fileName);
-    //     if (uploadResult is not null)
-    //         return uploadResult.StoredFileName;
-
-    //     return "File not found.";
-    // }
+   
 }
+
+
+
 
 @*@if (fileNames.Count > 0)
 {
@@ -112,6 +126,16 @@
            </li>
         }
     </ul>
+
+
+
+    <h1 class="display-4">Upload Files!</h1>
+    <div class="form-group">
+    <InputFile OnChange="@OnInputFileChange" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="form-control-file" />
+</div>
+<p class="alert alert-info">@Message</p>
+
+
 }*@
 
 

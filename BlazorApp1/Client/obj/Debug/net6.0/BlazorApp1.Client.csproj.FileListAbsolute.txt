@@ -874,3 +874,4 @@ F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Debug\net6.0\build-gz\ohAZ
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Debug\net6.0\build-gz\UbNmmkAJ.gz
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Debug\net6.0\build-gz\M1fnbi4M.gz
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Debug\net6.0\build-gz\izFisskQ.gz
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Client\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
