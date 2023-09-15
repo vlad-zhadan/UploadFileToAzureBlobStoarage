@@ -9,6 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Azure.Communication.Email" Version="1.0.1" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.18.0" />
+    <PackageReference Include="GemBox.Document" Version="35.0.1480" />
+    <PackageReference Include="GemBox.Email" Version="17.0.1147" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.22" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
   </ItemGroup>

@@ -18,6 +18,7 @@
                 <div class="form-group">
 
                     <input type="email" id="email" @bind="Email" class="form-control" placeholder="Enter your email" required />
+                    <ValidationMessage For="@(() => Email)" />
                     
                 </div>
             </form>
@@ -36,8 +37,8 @@
 
 
 @code {
-    // [Required(ErrorMessage = "Email is required")]
-    // [EmailAddress(ErrorMessage = "Invalid email format")]
+    [Required]
+    [EmailAddress(ErrorMessage = "Invalid email format")]
     private string Email = "";
 
     private bool submitted = false;
@@ -99,7 +100,7 @@
         Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
 
         form = new MultipartFormDataContent();
-       
+        Email = "";
     }
 
     private async Task HandleSubmit() => submitted = true;

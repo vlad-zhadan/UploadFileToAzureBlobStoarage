@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "GemBox.Email": {
+              "target": "Package",
+              "version": "[17.0.1147, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[6.0.20, )"
@@ -135,6 +139,14 @@
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.18.0, )"
+            },
+            "GemBox.Document": {
+              "target": "Package",
+              "version": "[35.0.1480, )"
+            },
+            "GemBox.Email": {
+              "target": "Package",
+              "version": "[17.0.1147, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.Server": {
               "target": "Package",

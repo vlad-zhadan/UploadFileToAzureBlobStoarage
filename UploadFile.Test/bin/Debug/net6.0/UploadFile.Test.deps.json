@@ -166,6 +166,77 @@
           }
         }
       },
+      "GemBox.Document/35.0.1480": {
+        "dependencies": {
+          "HarfBuzzSharp": "2.8.2",
+          "Portable.BouncyCastle": "1.8.9",
+          "SkiaSharp": "2.88.3",
+          "System.Reflection.Emit.ILGeneration": "4.7.0",
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Text.Encoding.CodePages": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GemBox.Document.dll": {
+            "assemblyVersion": "35.0.0.1479",
+            "fileVersion": "35.0.200.1479"
+          }
+        }
+      },
+      "GemBox.Email/17.0.1147": {
+        "dependencies": {
+          "Pkcs11Interop": "5.1.1",
+          "Portable.BouncyCastle": "1.8.9",
+          "System.Buffers": "4.5.1",
+          "System.Text.Encoding.CodePages": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GemBox.Email.dll": {
+            "assemblyVersion": "17.0.0.1146",
+            "fileVersion": "17.0.200.1146"
+          }
+        }
+      },
+      "HarfBuzzSharp/2.8.2": {
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "2.8.2",
+          "HarfBuzzSharp.NativeAssets.macOS": "2.8.2",
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/HarfBuzzSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.8.2.0"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/2.8.2": {
+        "runtimeTargets": {
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/2.8.2": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "MailKit/4.2.0": {
         "dependencies": {
           "MimeKit": "4.2.0"
@@ -334,7 +405,7 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "7.0.0",
           "Microsoft.Net.Http.Headers": "2.2.0",
-          "System.Buffers": "4.5.0"
+          "System.Buffers": "4.5.1"
         }
       },
       "Microsoft.AspNetCore.Http.Features/2.2.0": {
@@ -874,7 +945,7 @@
       "Microsoft.Net.Http.Headers/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0",
-          "System.Buffers": "4.5.0"
+          "System.Buffers": "4.5.1"
         }
       },
       "Microsoft.NET.Sdk.Functions/4.2.0": {
@@ -1263,6 +1334,22 @@
           }
         }
       },
+      "Pkcs11Interop/5.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Pkcs11Interop.dll": {
+            "assemblyVersion": "5.1.1.0",
+            "fileVersion": "5.1.1.0"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.9.0",
+            "fileVersion": "1.8.9.1"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1311,6 +1398,46 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "SkiaSharp/2.88.3": {
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.3",
+          "SkiaSharp.NativeAssets.macOS": "2.88.3"
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.3.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.3": {
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.3": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/6.5.0": {
         "dependencies": {
           "Microsoft.OpenApi": "1.2.3"
@@ -1327,7 +1454,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Buffers/4.5.0": {},
+      "System.Buffers/4.5.1": {},
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -1476,7 +1603,7 @@
           "System.ObjectModel": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.7.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
@@ -1530,7 +1657,7 @@
       "System.IO.Compression/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
-          "System.Buffers": "4.5.0",
+          "System.Buffers": "4.5.1",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.IO": "4.3.0",
@@ -1548,7 +1675,7 @@
       },
       "System.IO.Compression.ZipFile/4.3.0": {
         "dependencies": {
-          "System.Buffers": "4.5.0",
+          "System.Buffers": "4.5.1",
           "System.IO": "4.3.0",
           "System.IO.Compression": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
@@ -1617,8 +1744,8 @@
           "System.ObjectModel": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.7.0",
+          "System.Reflection.Emit.Lightweight": "4.7.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Reflection.TypeExtensions": "4.3.0",
@@ -1712,26 +1839,13 @@
         "dependencies": {
           "System.IO": "4.3.0",
           "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.7.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Emit.ILGeneration/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
-      "System.Reflection.Emit.Lightweight/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {},
+      "System.Reflection.Emit.Lightweight/4.7.0": {},
       "System.Reflection.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -2199,6 +2313,7 @@
       "BlazorApp1.Client/1.0.0": {
         "dependencies": {
           "BlazorApp1.Shared": "1.0.0",
+          "GemBox.Email": "17.0.1147",
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.20"
         },
         "runtime": {
@@ -2211,6 +2326,8 @@
           "Azure.Storage.Blobs": "12.18.0",
           "BlazorApp1.Client": "1.0.0",
           "BlazorApp1.Shared": "1.0.0",
+          "GemBox.Document": "35.0.1480",
+          "GemBox.Email": "17.0.1147",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "6.0.22",
           "Swashbuckle.AspNetCore.Swagger": "6.5.0"
         },
@@ -2336,6 +2453,41 @@
       "sha512": "sha512-ZXhHT2YwP9lajrwSKbLlFqsmCCvFJMoRSK9t7sImfnCyd0OB3MhgxdoMcVqxbq1iyxD6mD2fiackWmBb7ayiXQ==",
       "path": "fluentassertions/6.12.0",
       "hashPath": "fluentassertions.6.12.0.nupkg.sha512"
+    },
+    "GemBox.Document/35.0.1480": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uap9zQ/IoE/tyu2ORfn+xzcWq3NKfUVhExHxeuROMwwBai+3GBhUZsJ77gYXguIR0t4P1QTtrRuTUFlY6+Elmg==",
+      "path": "gembox.document/35.0.1480",
+      "hashPath": "gembox.document.35.0.1480.nupkg.sha512"
+    },
+    "GemBox.Email/17.0.1147": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iIPQz9id5FToXTdtC7ywkz0ABNkzIG8qp1j/WvyljRJFnPg83WnIPZgSZano2kJfYk9Wtihqlgz3GQ4/ZSlM8Q==",
+      "path": "gembox.email/17.0.1147",
+      "hashPath": "gembox.email.17.0.1147.nupkg.sha512"
+    },
+    "HarfBuzzSharp/2.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FE1LiYN6XhSafzpI1NXrKJKsfNCcnaYaRlH5qu8Tl4f03tfu5i9b8uk1JjqsuaBJgCHCoGobukFOWcNNNGjbCA==",
+      "path": "harfbuzzsharp/2.8.2",
+      "hashPath": "harfbuzzsharp.2.8.2.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.macOS/2.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iX9qhY3MRvwAmUwfxnTCWms+xpLVM0DPFhDdS0KmXl9TAMh3dHaqcL9oQmn20MtaMz6kS/isJeJNzDFJM8EKYQ==",
+      "path": "harfbuzzsharp.nativeassets.macos/2.8.2",
+      "hashPath": "harfbuzzsharp.nativeassets.macos.2.8.2.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.Win32/2.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FDCEa1e7s8ILADfzpdjoNbVzIxYeMRirVDlEGdPpFOf22djw6a7S2pHA+LQGwJLgffniTrjpbOVNJP3PvSyYpg==",
+      "path": "harfbuzzsharp.nativeassets.win32/2.8.2",
+      "hashPath": "harfbuzzsharp.nativeassets.win32.2.8.2.nupkg.sha512"
     },
     "MailKit/4.2.0": {
       "type": "package",
@@ -2946,6 +3098,20 @@
       "path": "nuget.frameworks/5.11.0",
       "hashPath": "nuget.frameworks.5.11.0.nupkg.sha512"
     },
+    "Pkcs11Interop/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YDj3v4LN318ToSLeg+5NSJUhH2rpmUGsQN/XL87rMVkq5iZnaV759c3unFJR+W83hGV72I8aa6v+eI8jnstFlg==",
+      "path": "pkcs11interop/5.1.1",
+      "hashPath": "pkcs11interop.5.1.1.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "path": "portable.bouncycastle/1.8.9",
+      "hashPath": "portable.bouncycastle.1.8.9.nupkg.sha512"
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3058,6 +3224,27 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
+    "SkiaSharp/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GG8X3EdfwyBfwjl639UIiOVOKEdeoqDgYrz0P1MUCnefXt9cofN+AK8YB/v1+5cLMr03ieWCQdDmPqnFIzSxZw==",
+      "path": "skiasharp/2.88.3",
+      "hashPath": "skiasharp.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.macOS/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CEbWAXMGFkPV3S1snBKK7jEG3+xud/9kmSAhu0BEUKKtlMdxx+Qal0U9bntQREM9QpqP5xLWZooodi8IlV8MEg==",
+      "path": "skiasharp.nativeassets.macos/2.88.3",
+      "hashPath": "skiasharp.nativeassets.macos.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.Win32/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MU4ASL8VAbTv5vSw1PoiWjjjpjtGhWtFYuJnrN4sNHFCePb2ohQij9JhSdqLLxk7RpRtWPdV93fbA53Pt+J0yw==",
+      "path": "skiasharp.nativeassets.win32/2.88.3",
+      "hashPath": "skiasharp.nativeassets.win32.2.88.3.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore.Swagger/6.5.0": {
       "type": "package",
       "serviceable": true,
@@ -3072,12 +3259,12 @@
       "path": "system.appcontext/4.3.0",
       "hashPath": "system.appcontext.4.3.0.nupkg.sha512"
     },
-    "System.Buffers/4.5.0": {
+    "System.Buffers/4.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
-      "path": "system.buffers/4.5.0",
-      "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -3352,19 +3539,19 @@
       "path": "system.reflection.emit/4.3.0",
       "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit.ILGeneration/4.3.0": {
+    "System.Reflection.Emit.ILGeneration/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
-      "path": "system.reflection.emit.ilgeneration/4.3.0",
-      "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
+      "sha512": "sha512-AucBYo3DSI0IDxdUjKksBcQJXPHyoPyrCXYURW1WDsLI4M65Ar/goSHjdnHOAY9MiYDNKqDlIgaYm+zL2hA1KA==",
+      "path": "system.reflection.emit.ilgeneration/4.7.0",
+      "hashPath": "system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
     },
-    "System.Reflection.Emit.Lightweight/4.3.0": {
+    "System.Reflection.Emit.Lightweight/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
-      "path": "system.reflection.emit.lightweight/4.3.0",
-      "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Extensions/4.3.0": {
       "type": "package",

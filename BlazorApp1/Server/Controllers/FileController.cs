@@ -14,23 +14,15 @@ namespace BlazorApp1.Server.Controllers
     {
         private readonly IFileService _fileService;
         private readonly ILogger<FileController> _logger;
+        private readonly IValidationEmailService _validationEmailService;
 
-        
-        public FileController(IFileService fileService, ILogger<FileController> logger)
+        public FileController(IFileService fileService, ILogger<FileController> logger, IValidationEmailService validationEmailService)
         {
          
             _fileService = fileService;
             _logger = logger;
+            _validationEmailService = validationEmailService;
         }
-
-        // delete this get !!!!
-        [HttpGet]
-        public async Task<IActionResult> ListAllBlobsAsync()
-        {
-            var result = await _fileService.ListBlobsAsync();
-            return Ok(result);
-        }
-
 
         [HttpPost]
         public async Task<IActionResult> UploadFileToAzureBlob([FromForm] UploadResult fileInfo)
@@ -46,6 +38,11 @@ namespace BlazorApp1.Server.Controllers
             if (fileInfo.Email == "")
             {
                 return BadRequest("Email cannot be empty");
+            }
+
+            if (!_validationEmailService.IsValidateEmail(fileInfo.Email))
+            {
+                return BadRequest("Invalid email");
             }
 
             var result = await _fileService.UploadBlobAsync(fileInfo.File, fileInfo.Email);

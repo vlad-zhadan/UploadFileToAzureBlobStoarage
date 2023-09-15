@@ -16,23 +16,25 @@ namespace FunctionApp.Services
     public class SendEmaisService : ISendEmaisService
     {
 
-        public void SendEmail(string receiverEmail, string uri)
+        public ResponseEmailDto SendEmail(string receiverEmail, string uri)
         {
             var email = new MimeMessage();
+            var responseDto = new ResponseEmailDto();
 
             if (receiverEmail is null)
             {
                 // need 
-                receiverEmail = "tonsilotrenor@gmail.com";
+                responseDto.IsSent = false;
+                responseDto.EmailTo = receiverEmail;
             }
 
-            email.From.Add(new MailboxAddress("Sender Name", "xiaomiredmix4good@gmail.com"));
+            email.From.Add(new MailboxAddress("File Upload Service", "xiaomiredmix4good@gmail.com"));
             email.To.Add(new MailboxAddress("Receiver Name", receiverEmail));
 
             email.Subject = "Testing out email sending";
 
             // Create the HTML body with the URI included
-            string bodyHtml = $"<b>Hello all the way from the land of C#</b><br><a href=\"{uri}\">Click here to access the resource</a>";
+            string bodyHtml = $"<b>Hello, you successfully upload file to Azure Storage! </b><br><a href=\"{uri}\">Click here to access the resource</a>";
 
             email.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
@@ -46,13 +48,20 @@ namespace FunctionApp.Services
                 // Note: only needed if the SMTP server requires authentication
                 smtp.Authenticate("xiaomiredmix4good@gmail.com", "g5PnTIAWdDO1zYrJ");
 
+                smtp.MessageSent += (sender, args) =>
+                {
+                    responseDto.IsSent = true;
+                    responseDto.EmailTo = receiverEmail;
+                };
+
+
                 smtp.Send(email);
                 smtp.Disconnect(true);
             }
 
 
 
-
+            return responseDto;
            
         }
     }

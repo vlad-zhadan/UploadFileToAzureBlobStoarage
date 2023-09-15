@@ -8,6 +8,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.4\buildTransitive\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.4\buildTransitive\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Configuration.UserSecrets.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\6.0.20\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\6.0.20\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets')" />
+    <Import Project="$(NuGetPackageRoot)gembox.email\17.0.1147\buildTransitive\netstandard2.0\GemBox.Email.targets" Condition="Exists('$(NuGetPackageRoot)gembox.email\17.0.1147\buildTransitive\netstandard2.0\GemBox.Email.targets')" />
     <Import Project="$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets" Condition="Exists('$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets')" />
   </ImportGroup>
 </Project>

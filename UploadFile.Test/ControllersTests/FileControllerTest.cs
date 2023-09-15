@@ -20,10 +20,12 @@ namespace UploadFile.Test.Controllers
     {
         private readonly IFileService _fileService;
         private readonly ILogger<FileController> _logger;
+        private readonly IValidationEmailService _validationEmailService;
         public FileControllerTest()
         {
             _fileService = A.Fake< IFileService>();
             _logger = A.Fake<ILogger<FileController>>();
+            _validationEmailService = A.Fake<IValidationEmailService>();
         }
 
         [Fact]
@@ -43,7 +45,7 @@ namespace UploadFile.Test.Controllers
 
             A.CallTo(() => _fileService.UploadBlobAsync(fileInfo.File, fileInfo.Email)).Returns(blobResponse);
 
-            var controller = new FileController(_fileService, _logger);
+            var controller = new FileController(_fileService, _logger, _validationEmailService);
 
             // Act
             var result = await controller.UploadFileToAzureBlob(fileInfo) as ObjectResult;
@@ -64,7 +66,7 @@ namespace UploadFile.Test.Controllers
                 Email = "test@gmail.com"
             };
 
-            var controller = new FileController(_fileService, _logger);
+            var controller = new FileController(_fileService, _logger, _validationEmailService);
 
             // Act
             var result = await controller.UploadFileToAzureBlob(fileInfo) as ObjectResult;
@@ -85,7 +87,7 @@ namespace UploadFile.Test.Controllers
                 Email = ""
             };
 
-            var controller = new FileController(_fileService, _logger);
+            var controller = new FileController(_fileService, _logger, _validationEmailService);
 
             // Act
             var result = await controller.UploadFileToAzureBlob(fileInfo) as ObjectResult;

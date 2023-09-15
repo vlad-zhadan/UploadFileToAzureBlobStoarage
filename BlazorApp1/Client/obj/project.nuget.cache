@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "q4i0IWeBIz5FfOjxvwn1OBN279A6G+MnzlOTddSr1q3t3ZXsnTGmrozFaOJmntWj1ZLTQw/pzcLeodwZM+NPqA==",
+  "dgSpecHash": "hnThnx0xsUSopGQ2TU1EDEHIntn6vRQ8NyYJ0APZ36Vrat+rJr5gmuN9wBRRWpgkZDNV7tgPz2n139aAAtdRNw==",
   "success": true,
   "projectFilePath": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\BlazorApp1.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\38095\\.nuget\\packages\\gembox.email\\17.0.1147\\gembox.email.17.0.1147.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.20\\microsoft.aspnetcore.authorization.6.0.20.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.20\\microsoft.aspnetcore.components.6.0.20.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.20\\microsoft.aspnetcore.components.analyzers.6.0.20.nupkg.sha512",
@@ -40,11 +41,15 @@
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.jsinterop\\6.0.20\\microsoft.jsinterop.6.0.20.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.20\\microsoft.jsinterop.webassembly.6.0.20.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
-    "C:\\Users\\38095\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\38095\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\38095\\.nuget\\packages\\pkcs11interop\\5.1.1\\pkcs11interop.5.1.1.nupkg.sha512",
+    "C:\\Users\\38095\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\38095\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\38095\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
     "C:\\Users\\38095\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.22\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.22.nupkg.sha512"

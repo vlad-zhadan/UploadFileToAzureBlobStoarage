@@ -27,31 +27,12 @@ namespace BlazorApp1.Server.Services
             _createSASBlob = createSASBlob;
         }
 
-        public async Task<List<BlobDto>> ListBlobsAsync()
-        {
-            List<BlobDto> files = new List<BlobDto>();
-
-            string uri = _filesConteiner.Uri.ToString();
-            await foreach (var file in _filesConteiner.GetBlobsAsync())
-            {
-                var name = file.Name;
-                var fullUri = $"{uri}/{name}";
-
-                files.Add(new BlobDto
-                {
-                    Name = name,
-                    Uri = fullUri,
-                    ContentType = file.Properties.ContentType
-                });
-            }
-            return files;
-        }
 
         public async Task<BlobResponseDto> UploadBlobAsync(IFormFile blob, string email)
         {
             BlobResponseDto response = new BlobResponseDto();
 
-            var trustedFileNameForFileStorage = Path.GetRandomFileName();
+            var trustedFileNameForFileStorage = Path.ChangeExtension(Path.GetRandomFileName(), "docx");
             BlobClient client = _filesConteiner.GetBlobClient(trustedFileNameForFileStorage);
           
             await using (Stream? data = blob.OpenReadStream())

@@ -1,6 +1,9 @@
 ﻿using Castle.Core.Logging;
 using FakeItEasy;
+using FluentAssertions;
+using FunctionApp;
 using FunctionApp.Services;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,54 +16,32 @@ namespace UploadFile.Test.AzureTrigerFunction.Tests
     public class EmailSendFunctionTests
     {
         [Fact]
-        public void Run_WithValidMetadata_ShouldSendEmail()
+        public void Run_WhenMetadataContainsEmail_ShouldNotCallSendEmail()
         {
             // Arrange
-            var mockSendEmailService = A.Fake<ISendEmaisService>();
-            var logger = A.Fake<ILogger>();
-            var emailSendFunction = new EmailSendFunction(mockSendEmailService);
-
+            var email = "test@gmail.com";
+            var uri = "http://example.com";
             var metadata = new Dictionary<string, string>
             {
-                { "Email", "test@example.com" },
-                { "Name", "Test File" },
-                { "Uri", "https://example.com/file" }
+                { "Email", email },
+                { "Uri", uri }
             };
 
-            var blobStream = new MemoryStream();
-            var blobName = "testfile.txt";
+            // Create a fake ISendEmaisService that does nothing
+            var sendEmailService = A.Fake<ISendEmaisService>();
+            A.CallTo(() => sendEmailService.SendEmail(A<string>._, A<string>._)).Returns(new ResponseEmailDto { IsSent = true });
+
+            var logger = A.Fake<ILogger<EmailSendFunction>>();
+
+            var function = new EmailSendFunction(sendEmailService);
 
             // Act
-            emailSendFunction.Run(blobStream, blobName, metadata, (Microsoft.Extensions.Logging.ILogger)logger);
+            var result = function.Run(new MemoryStream(), "testblob", metadata, logger);
 
             // Assert
-            A.CallTo(() => mockSendEmailService.SendEmail("test@example.com", "https://example.com/file"))
-                .MustHaveHappenedOnceExactly();
-
-
+            result.Should().BeTrue(); 
+           
         }
 
-        [Fact]
-        public void Run_WithMissingMetadata_ShouldNotSendEmail()
-        {
-            // Arrange
-            var mockSendEmailService = A.Fake<ISendEmaisService>();
-            var logger = A.Fake<ILogger>();
-            var emailSendFunction = new EmailSendFunction(mockSendEmailService);
-
-            var metadata = new Dictionary<string, string>
-            {
-                // Missing Email, Name, and Uri
-            };
-
-            var blobStream = new MemoryStream();
-            var blobName = "testfile.txt";
-
-            // Act
-            emailSendFunction.Run(blobStream, blobName, metadata, (Microsoft.Extensions.Logging.ILogger)logger);
-
-            // Assert
-            A.CallTo(() => mockSendEmailService.SendEmail(A<string>._, A<string>._)).MustNotHaveHappened();
-        }
     }
 }

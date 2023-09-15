@@ -4,5 +4,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.4\buildTransitive\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\6.0.4\buildTransitive\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.devserver\6.0.20\build\Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.devserver\6.0.20\build\Microsoft.AspNetCore.Components.WebAssembly.DevServer.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\6.0.20\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.analyzers\6.0.20\buildTransitive\netstandard2.0\Microsoft.AspNetCore.Components.Analyzers.targets')" />
+    <Import Project="$(NuGetPackageRoot)gembox.email\17.0.1147\buildTransitive\netstandard2.0\GemBox.Email.targets" Condition="Exists('$(NuGetPackageRoot)gembox.email\17.0.1147\buildTransitive\netstandard2.0\GemBox.Email.targets')" />
   </ImportGroup>
 </Project>

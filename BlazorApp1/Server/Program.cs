@@ -16,6 +16,7 @@ builder.Services.AddRazorPages();
 //});
 
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IValidationEmailService, ValidationEmailService>();
 builder.Services.AddSingleton<ICreateSASBlobService, CreateSASBlobService>();
 
 var app = builder.Build();

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Azure.Storage.Blobs;
+using FunctionApp;
 using FunctionApp.Services;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
@@ -22,7 +23,7 @@ using Microsoft.Extensions.Logging;
             }
 
             [FunctionName("EmailSendFunction")]
-            public void Run(
+            public bool Run(
                 [BlobTrigger("files/{name}")] Stream myBlob, 
                 string name,
                 IDictionary<string, string> metadata,
@@ -45,11 +46,9 @@ using Microsoft.Extensions.Logging;
 
             // get metadata
             log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
+            ResponseEmailDto result = _sendEmaisService.SendEmail(email, uri);
+            return result.IsSent;
 
-            
-
-         
-                _sendEmaisService.SendEmail(email, uri);
             }
         }
     }

@@ -5,6 +5,6 @@ namespace FunctionApp.Services
 {
     public interface ISendEmaisService
     {
-        public void SendEmail(string receiverEmail, string uri);
+        public ResponseEmailDto SendEmail(string receiverEmail, string uri);
     }
 }
