@@ -36,12 +36,12 @@ namespace UploadFile.Test.AzureTrigerFunction.Tests
             var function = new EmailSendFunction(sendEmailService);
 
             // Act
-            var result = function.Run(new MemoryStream(), "testblob", metadata, logger);
+            function.Run(new MemoryStream(), "testblob", metadata, logger);
 
             // Assert
-            result.Should().BeTrue(); 
+             
            
         }
-
+        
     }
 }

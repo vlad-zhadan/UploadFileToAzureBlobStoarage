@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wSKsOal9IHBJUc/BYVbym+wRdaEs/jnFYdxZ7tIWIwc=",
+  "Hash": "gIB/UF+V2xaWyet0o6w98P2u0yONwwcPa64/24qMcdc=",
   "Source": "BlazorApp1.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -967,6 +967,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\38095\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.22\\runtimes\\browser-wasm\\lib\\net6.0\\netstandard.dll"
+    },
+    {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\38095\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib\\net6.0\\Newtonsoft.Json.dll"
     },
     {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Pkcs11Interop.dll",
@@ -4163,6 +4180,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\System.Linq.Parallel.dll"
+    },
+    {
+      "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\36nUrlwu.gz",
+      "SourceId": "BlazorApp1.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll"
     },
     {
       "Identity": "F:\\KPI\\programing\\C#\\BlazorApp1\\BlazorApp1\\Client\\obj\\Release\\net6.0\\build-gz\\36qRCWIY.gz",

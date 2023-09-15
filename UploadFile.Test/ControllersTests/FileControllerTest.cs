@@ -29,21 +29,17 @@ namespace UploadFile.Test.Controllers
         }
 
         [Fact]
-        public async Task UploadFileToAzureBlob_SendingCorrectFileInfo_ReturnOK()
+        public async Task UploadFileToAzureBlob_SendingValidInput_ReturnsOkResult()
         {
             // Arrange
-            // add so we can test validation 
             var fileInfo = new UploadResult
             {
                 File = new FormFile(Stream.Null, 0, 0, "testFile", "testFile.docx"),
                 Email = "test@gmail.com"
             };
-
-
-            // don`t really neen response from UploadBlobAsync
             var blobResponse = A.Fake<BlobResponseDto>();
 
-            A.CallTo(() => _fileService.UploadBlobAsync(fileInfo.File, fileInfo.Email)).Returns(blobResponse);
+            A.CallTo(() => _validationEmailService.IsValidateEmail(fileInfo.Email)).Returns(true);
 
             var controller = new FileController(_fileService, _logger, _validationEmailService);
 
@@ -55,7 +51,6 @@ namespace UploadFile.Test.Controllers
             result.StatusCode.Should().Be(200);
             result.Value.Should().BeEquivalentTo(blobResponse);
         }
-
         [Fact]
         public async Task UploadFileToAzureBlob_SendingEmptyFileName_ReturnsBadRequest()
         {

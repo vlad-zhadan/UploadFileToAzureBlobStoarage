@@ -14,11 +14,15 @@
     align-items: stretch;
 }
 
+.message[b-7hithh1ngy] {
+    grid-area: message;
+}
+
 .form[b-7hithh1ngy] {
     display: grid;
     grid-area: form;
-    grid-template-columns: 3fr 1fr;
-    
+    grid-template-columns: 3fr 1fr ;
+
     grid-template-areas:
         "email button";
 }
@@ -28,12 +32,12 @@
     justify-content: center;
     align-items: center;
     width: 80vw;
-
-    grid-template-rows: 70vh 5vh;
+    grid-template-rows: 70vh 5vh 10vh;
     grid-gap: 5px;
     grid-template-areas:
         "main"
-        "form";
+        "form"
+        "message";
 }
 
 .center[b-7hithh1ngy]{

@@ -15,6 +15,7 @@
           "GemBox.Document": "35.0.1480",
           "GemBox.Email": "17.0.1147",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "6.0.22",
+          "Newtonsoft.Json": "13.0.3",
           "Swashbuckle.AspNetCore.Swagger": "6.5.0"
         },
         "runtime": {
@@ -435,6 +436,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
       "Pkcs11Interop/5.1.1": {
         "runtime": {
           "lib/netstandard2.0/Pkcs11Interop.dll": {
@@ -569,7 +578,8 @@
         "dependencies": {
           "BlazorApp1.Shared": "1.0.0",
           "GemBox.Email": "17.0.1147",
-          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.20"
+          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.20",
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "BlazorApp1.Client.dll": {}
@@ -926,6 +936,13 @@
       "sha512": "sha512-Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
       "path": "microsoft.openapi/1.2.3",
       "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
     "Pkcs11Interop/5.1.1": {
       "type": "package",

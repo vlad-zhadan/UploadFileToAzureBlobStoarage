@@ -76,3 +76,4 @@ F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\bin\Release\net6.0\runtimes\os
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\bin\Release\net6.0\Newtonsoft.Json.dll

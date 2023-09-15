@@ -32,6 +32,7 @@ F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\Microsoft.JSInterop.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\Microsoft.JSInterop.WebAssembly.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\Pkcs11Interop.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\BouncyCastle.Crypto.dll
 F:\KPI\programing\C#\BlazorApp1\BlazorApp1\Server\obj\Release\net6.0\PubTmp\Out\SkiaSharp.dll
