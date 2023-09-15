@@ -33,7 +33,7 @@ namespace UploadFile.Test.ServicesTests
 
             // Assert
             response.Should().NotBeNull();
-            response.Status.Should().Be("File test.docx uploaded !");
+            response.Status.Should().Be("File test.docx uploaded to Azure");
             response.Error.Should().BeFalse();
             response.Blob.Should().NotBeNull();
             response.Blob.Uri.Should().Be("https://example.com/sas");

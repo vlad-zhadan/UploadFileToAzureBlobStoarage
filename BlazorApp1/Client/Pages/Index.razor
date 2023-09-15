@@ -2,6 +2,7 @@
 @using System.Net.Http.Headers;
 @using BlazorApp1.Shared
 @using System.ComponentModel.DataAnnotations
+@using Newtonsoft.Json;
 @inject HttpClient Http
 
 <PageTitle>Upload Files</PageTitle>
@@ -27,15 +28,12 @@
                 
             </form>
         </div>
+        <div class=" message">
+            <p class="alert alert-info">@Message</p>
+        </div>
         
     </div>
 </div>
-
-
-@if (submitted)
-{
-    <p>Submitted Email: @Email</p>
-}
 
 
 @code {
@@ -48,6 +46,7 @@
     private long maxFileSize = 1024 * 1024 * 15;
     private MultipartFormDataContent form = new();
     private string HoverClass = string.Empty;
+    string allowedExtension = ".docx";
 
     void OnDragEnter(DragEventArgs e) => HoverClass = "hover";
     void OnDragLeave(DragEventArgs e) => HoverClass = string.Empty;
@@ -68,12 +67,18 @@
             return;
         }
 
+        var fileExtension = System.IO.Path.GetExtension(file.Name).ToLowerInvariant();
+
+        if (fileExtension != allowedExtension)
+        {
+            Message = "Invalid file extension. Please select a .docx file.";
+            HoverClass = string.Empty;
+            return;
+        }
+
         Message = $"File {file.Name} selected";
-
         form = new MultipartFormDataContent();
-
         var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
-        //using var fileContent = new ByteArrayContent(await File.ReadAllBytesAsync(filePath));
         fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
         form.Add(fileContent, "File", file.Name);
 
@@ -85,6 +90,7 @@
     {
         if (!Convert.ToBoolean(form.Count()))
         {
+            Message = "No file(s) selected";
             return;
         }
 
@@ -96,11 +102,38 @@
         // this is the changed part
         form.Add(new StringContent(Email), "Email");
 
-        var response = await Http.PostAsync("/api/File", form);
-        response.EnsureSuccessStatusCode();
-        var responseContent = await response.Content.ReadAsStringAsync();
-        Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
+        try
+        {
+            var response = await Http.PostAsync("/api/File", form);
 
+            if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                Message = await response.Content.ReadAsStringAsync();
+            }
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                BlobResponseDto blobResponse = JsonConvert.DeserializeObject<BlobResponseDto>(responseContent);
+                Message = blobResponse.Status + " and sent to " + blobResponse.EmailTo;
+            }
+
+            response.EnsureSuccessStatusCode();
+            //var responseContent = await response.Content.ReadAsStringAsync();
+            //Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
+        }
+        catch (HttpRequestException ex)
+        {
+            Console.WriteLine("HTTP Request Exception: " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An unexpected exception occurred: " + ex.Message);
+        }
+
+
+
+        Message = "No file(s) selected";
         form = new MultipartFormDataContent();
         Email = "";
     }

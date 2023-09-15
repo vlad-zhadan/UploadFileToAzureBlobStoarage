@@ -35,6 +35,14 @@ namespace BlazorApp1.Server.Controllers
                 return BadRequest("Invalid file name");
             }
 
+            var allowedExtension = ".docx";
+            var fileExtension = Path.GetExtension(fileInfo.File.FileName).ToLowerInvariant();
+
+            if (fileExtension != allowedExtension)
+            {
+                return BadRequest("Invalid file extension. Please upload a .docx file.");
+            }
+
             if (fileInfo.Email == "")
             {
                 return BadRequest("Email cannot be empty");

@@ -54,8 +54,9 @@ namespace BlazorApp1.Server.Services
 
             await client.SetMetadataAsync(metadata);
 
-            response.Status = $"File {blob.FileName} uploaded !";
+            response.Status = $"File {blob.FileName} uploaded to Azure";
             response.Error = false;
+            response.EmailTo = email;
             response.Blob.Uri = client.Uri.AbsoluteUri;
             response.Blob.Name = client.Name;
 

@@ -17,5 +17,6 @@ namespace BlazorApp1.Shared
         public string? Status { get; set; }
         public bool Error { get; set; }
         public BlobDto Blob { get; set; }
+        public string? EmailTo { get; set; }
     }
 }
