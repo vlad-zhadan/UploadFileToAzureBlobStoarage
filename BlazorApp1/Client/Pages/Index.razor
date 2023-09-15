@@ -74,33 +74,31 @@
         fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
         form.Add(fileContent, "File", file.Name);
 
-        // this is the changed part
-        form.Add(new StringContent(Email), "Email");
+
     }
 
 
     private async Task OnButtonSubmitClick()
     {
-       
+        if (!Convert.ToBoolean(form.Count()))
+        {
+            return;
+        }
 
-            if (!Convert.ToBoolean(form.Count()))
-            {
+        if (Email == "")
+        {
+            //write that email is choosen
+            return;
+        }
+        // this is the changed part
+        form.Add(new StringContent(Email), "Email");
 
-                return;
-            }
+        var response = await Http.PostAsync("/api/File", form);
+        response.EnsureSuccessStatusCode();
+        var responseContent = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
 
-            if (Email == "")
-            {
-                //write that email is choosen
-                return;
-            }
-
-            var response = await Http.PostAsync("/api/File", form);
-            response.EnsureSuccessStatusCode();
-            var responseContent = await response.Content.ReadAsStringAsync();
-            Console.WriteLine("UploadFileInModel_WithHttpClientAsync response :" + responseContent);
-
-            form = new MultipartFormDataContent();
+        form = new MultipartFormDataContent();
        
     }
 
